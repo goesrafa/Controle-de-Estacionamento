@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Jumbotron  from 'react-bootstrap/Jumbotron'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+function App(){
+
+  return(
+    <>
+      <Navbar bg="dark" variant="dark">
+    
+    <Navbar.Brand href="#home">Controle de Estacionamento</Navbar.Brand>
+    <Nav className="me-auto">
+      <Nav.Link href="#moto">Moto</Nav.Link><br></br>
+      <Nav.Link href="#carro">Carro</Nav.Link><br></br>
+      <Nav.Link href="#relatorio">Relatório diario</Nav.Link>
+    </Nav>
+    
+  </Navbar>
+      <Jumbotron>
+        <h1>Controle de Estacionamento</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Controle de estacionamento com ReactJS
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      </Jumbotron>
+    </>
+  )
 }
 
 export default App;
